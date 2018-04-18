@@ -1,0 +1,44 @@
+﻿@using System
+@using System.Net
+@using System.Threading.Tasks
+@using BaseKay.Web.Shared
+@page "/topics"
+@inject HttpClient Http
+<h1>Topics</h1>
+
+@if (topics == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class='table'>
+        <thead>
+        <tr>
+            <th>Date</th>
+            <th>Temp. (C)</th>
+            <th>Temp. (F)</th>
+            <th>Summary</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var forecast in topics)
+        {
+            <tr>
+                <td>@forecast.Created.ToShortDateString()</td>
+                <td>@forecast.Title</td>
+                <td>@forecast.Body</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+@functions {
+    Topic[] topics;
+
+    protected override async Task OnInitAsync()
+    {
+        topics = await Http.GetJsonAsync<Topic[]>("/api/Topics/Topics");
+    }
+}

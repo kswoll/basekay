@@ -15,4 +15,8 @@
     <ProjectReference Include="..\BaseKay.Web.Shared\BaseKay.Web.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <BlazorGenerate Remove="Pages\Topics.cshtml" />
+  </ItemGroup>
+
 </Project>

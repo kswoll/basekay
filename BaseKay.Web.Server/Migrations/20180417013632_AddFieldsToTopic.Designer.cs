@@ -11,9 +11,10 @@ using System;
 namespace BaseKay.Web.Server.Migrations
 {
     [DbContext(typeof(KbDb))]
-    partial class KbDbModelSnapshot : ModelSnapshot
+    [Migration("20180417013632_AddFieldsToTopic")]
+    partial class AddFieldsToTopic
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
