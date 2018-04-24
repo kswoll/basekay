@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\actions",
+    "\\src\\components",
+    "\\src\\constants",
+    "\\src\\containers",
+    "\\src\\reducers",
+    "\\src\\types"
+  ],
+  "SelectedNode": "\\tsconfig.json",
+  "PreviewInSolutionExplorer": false
+}
