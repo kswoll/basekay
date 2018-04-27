@@ -6,9 +6,8 @@ import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 import { createStore, combineReducers } from 'redux'
 import { enthusiasm } from './reducers/index'
-import { IStoreState } from './types';
 
-const reducers = combineReducers<IStoreState>({
+const reducers = combineReducers({
     enthusiasmState: enthusiasm
 });
 
